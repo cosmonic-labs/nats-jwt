@@ -7,7 +7,7 @@ edition = "2021"
 authors = ["The wasmCloud Team"]
 categories = ["nats", "jwt", "wasmCloud"]
 license = "Apache-2.0"
-repository = "https://github.com/wasmCloud/nats-jwt"
+repository = "https://github.com/cosmonic-labs/nats-jwt"
 
 [badges.maintenance]
 status = "actively-developed"
