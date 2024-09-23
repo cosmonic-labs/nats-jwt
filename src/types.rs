@@ -1,5 +1,4 @@
-use indexmap::IndexSet;
-use serde::{Deserialize, Deserializer, Serialize};
+use serde::{Deserialize, Serialize};
 use std::collections::{BTreeMap, BTreeSet};
 use std::fmt::Display;
 use std::time::Duration;
@@ -18,10 +17,10 @@ pub struct NatsLimits {
 
 #[derive(Debug, Serialize, Deserialize, Clone, Hash, PartialEq, Eq)]
 pub struct Limits {
-    #[serde(flatten)]
-    pub user_limits: UserLimits,
-    #[serde(flatten)]
-    pub nats_limits: NatsLimits,
+    #[serde(flatten, skip_serializing_if = "Option::is_none")]
+    pub user_limits: Option<UserLimits>,
+    #[serde(flatten, skip_serializing_if = "Option::is_none")]
+    pub nats_limits: Option<NatsLimits>,
 }
 
 #[derive(Debug, Serialize, Deserialize, Clone, Hash, PartialEq, Eq)]
