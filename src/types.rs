@@ -134,9 +134,9 @@ pub enum ResponseType {
 impl Display for ResponseType {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         match self {
-            ResponseType::Singleton => write!(f, "singleton"),
-            ResponseType::Stream => write!(f, "stream"),
-            ResponseType::Chunked => write!(f, "chunked"),
+            ResponseType::Singleton => write!(f, "Singleton"),
+            ResponseType::Stream => write!(f, "Stream"),
+            ResponseType::Chunked => write!(f, "Chunked"),
         }
     }
 }
