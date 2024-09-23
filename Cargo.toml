@@ -1,0 +1,25 @@
+[package]
+name = "nats-jwt"
+version = "0.1.0"
+description = "A port of the NATS jwt.go package to Rust"
+readme = "README.md"
+edition = "2021"
+authors = ["The wasmCloud Team"]
+categories = ["nats", "jwt", "wasmCloud"]
+license = "Apache-2.0"
+repository = "https://github.com/wasmCloud/nats-jwt"
+
+[badges.maintenance]
+status = "actively-developed"
+
+[dependencies]
+anyhow = "1"
+base64 = "0.22"
+bytes = "1.7"
+data-encoding = "2.6"
+derive_builder = "0.20"
+indexmap = {version = "2", features = ["serde"]}
+nkeys = {version = "0.4", features = ["xkeys"]}
+serde = {version = "1", features = ["derive"]}
+serde_json = {version = "1"}
+sha2 = "0.10"
