@@ -39,7 +39,7 @@ pub struct JetStreamLimits {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub disk_max_stream_bytes: Option<i64>,
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub max_bytes_required: Option<i64>,
+    pub max_bytes_required: Option<bool>,
 }
 
 #[derive(Debug, Serialize, Deserialize, Clone, Default)]
